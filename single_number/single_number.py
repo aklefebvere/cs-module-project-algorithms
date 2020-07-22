@@ -4,10 +4,16 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
-
-
+    for i in arr:
+        dupe = 0
+        for v in arr:
+            if i == v:
+                dupe += 1
+                if dupe > 1:
+                    break
+        if dupe == 1:
+            return i
+               
 if __name__ == '__main__':
     # Use the main function to test your implementation
     arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
